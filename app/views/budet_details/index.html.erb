@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Budet Details</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Budget</th>
+      <th>Product</th>
+      <th>Amount</th>
+      <th>Unit price</th>
+      <th>Subtotal</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @budet_details.each do |budet_detail| %>
+      <tr>
+        <td><%= budet_detail.budget %></td>
+        <td><%= budet_detail.product %></td>
+        <td><%= budet_detail.amount %></td>
+        <td><%= budet_detail.unit_price %></td>
+        <td><%= budet_detail.subtotal %></td>
+        <td><%= link_to 'Show', budet_detail %></td>
+        <td><%= link_to 'Edit', edit_budet_detail_path(budet_detail) %></td>
+        <td><%= link_to 'Destroy', budet_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Budet Detail', new_budet_detail_path %>
