@@ -1,0 +1,6 @@
+
+# for generete pages.
+rails g controller Pages welcome dashboard home
+
+# devise
+rails generate devise User name:string dni:integer phone:string user_type:string

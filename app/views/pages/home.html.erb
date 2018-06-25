@@ -1,0 +1,16 @@
+<%= stylesheet_link_tag 'home', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+  <main role="main" class="inner cover">
+    <h1 class="cover-heading">Presupuestos.</h1>
+    <p class="lead">Es una aplicación para gestionar los presupuestos de la empresa y simplificar la comunicación con nuestros clientes.</p>
+    <p>Sino tiene una cuenta, deberá crear una primero para poder utilizar la aplicación</p>
+    <p class="lead">
+    <%= link_to "Crear cuenta", new_user_registration_path, class: "btn btn-lg btn-primary" %><br />
+    <br>
+    <p class="lead">Si tiene cuenta, haga click en el siguiente enlace para identificarse</p>
+      <%= link_to "Iniciar sesion", new_user_session_path, class: "btn btn-lg btn-secondary" %>
+    </p>
+  </main>
+
+
+
